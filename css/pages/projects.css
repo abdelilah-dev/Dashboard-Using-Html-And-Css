@@ -1,0 +1,97 @@
+:root {
+    --blue-color: #0075ff;
+    --blue-alt-color: #0d69d5;
+    --orange-color: #f69e0b;
+    --green-color: #22c55e;
+    --red-color: #f44336;
+    --gray-color: #888;
+
+    --main-transition-duration: 0.3s;
+}
+
+/* Start Projects Page  */
+.projetcs-page {
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+}
+
+.projetcs-page .project .date {
+    top: 10px;
+    right: 10px;
+    position: absolute;
+}
+
+.projetcs-page .project>h4 {
+    font-weight: normal;
+}
+
+.project .team {
+    position: relative;
+    min-height: 80px;
+}
+
+.project .team a {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: var(--main-transition-duration);
+}
+
+.project .team a:hover {
+    z-index: 10;
+}
+
+.project .team a:nth-child(2) {
+    left: 25px;
+}
+
+.project .team a:nth-child(3) {
+    left: 50px;
+}
+
+.project .team a:nth-child(4) {
+    left: 75px;
+}
+
+.project .team a:nth-child(5) {
+    left: 100px;
+}
+
+.project .team img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.project .do {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #eee ;
+    justify-content: flex-end;
+}
+
+.project .do span {
+    margin-left: 5px; 
+    width: fit-content;
+}
+
+.project .info {
+    padding-top: 15px;
+    margin-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.project .info .prog {
+    width: 260px;
+    height: 8px;
+    border-radius: 6px;
+    position: relative;
+}
+.project .info .prog span {
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 6px 0 0 6px;
+}
+/* End Projects Page  */

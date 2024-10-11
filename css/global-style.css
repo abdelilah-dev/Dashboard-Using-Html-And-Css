@@ -1,0 +1,231 @@
+:root {
+    --blue-color: #0075ff;
+    --blue-alt-color: #0d69d5;
+    --orange-color: #f69e0b;
+    --green-color: #22c55e;
+    --red-color: #f44336;
+    --gray-color: #888;
+
+    --main-transition-duration: 0.3s;
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scrollbar-color: var(--blue-color);
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--blue-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--blue-alt-color);
+}
+
+.page {
+    background-color: #f1f5f9;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    -webkit-box-shadow: 0 0 10px #ddd;
+    box-shadow: 0 0 10px #ddd;
+}
+
+.sidebar>h3 {
+    margin-bottom: 50px;
+}
+
+@media (min-width: 768px) {
+
+    .sidebar>h3::before,
+    .sidebar>h3::after {
+        content: "";
+        background: black;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        position: absolute;
+    }
+
+    .sidebar>h3::before {
+        width: 80px;
+        height: 2px;
+        bottom: -20px;
+    }
+
+    .sidebar>h3::after {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        border: 5px solid white;
+        bottom: -29px;
+    }
+}
+
+.sidebar>ul a {
+    margin-bottom: 5px;
+    -webkit-transition: var(--main-transition-duration);
+    transition: var(--main-transition-duration);
+}
+
+.sidebar>ul a:hover,
+.sidebar>ul a.active {
+    background-color: #f6f6f6;
+}
+
+.sidebar>ul li span {
+    margin-left: 10px;
+}
+
+@media (max-width: 767px) {
+    .sidebar {
+        width: 80px;
+        padding: 10px;
+    }
+
+    .sidebar>h3 {
+        font-size: 13px;
+        margin-bottom: 15px;
+    }
+
+    .sidebar>ul li a {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    .sidebar>ul li a span {
+        display: none;
+    }
+}
+
+/* End Sidebar  */
+
+/* Start content Section */
+/* Start Header  */
+.content .header .search::before {
+    font-family: var(--fa-style-family-classic);
+    content: "\f002";
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 15px;
+    color: var(--gray-color);
+}
+
+.header .search input[type=search] {
+    margin-left: 5px;
+    padding-left: 30px;
+    width: 160px;
+    -webkit-transition: width var(--main-transition-duration);
+    transition: width var(--main-transition-duration);
+}
+
+.header .search input[type=search]:focus {
+    width: 200px;
+}
+
+.header .search input[type=search]:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+
+.header .search input[type=search]:focus::-moz-placeholder {
+    color: transparent;
+}
+
+.header .search input[type=search]:focus:-ms-input-placeholder {
+    color: transparent;
+}
+
+.header .search input[type=search]:focus::-ms-input-placeholder {
+    color: transparent;
+}
+
+.header .search input[type=search]:focus::placeholder {
+    color: transparent;
+}
+
+.header .icons .notification {
+    position: relative;
+}
+
+.header .icons .notification::before {
+    position: absolute;
+    content: "";
+    top: -5px;
+    right: -5px;
+    width: 10px;
+    height: 10px;
+    background-color: var(--red-color);
+    border-radius: 50%;
+}
+
+.header .icons img {
+    width: 32px;
+    margin-left: 15px;
+}
+
+/* End Header  */
+
+/* Main Hedding  */
+.main-hedding {
+    margin: 20px 20px 40px;
+}
+
+.main-hedding::before,
+.main-hedding::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    height: 3px;
+}
+
+.main-hedding::before {
+    width: 120px;
+    background: white;
+}
+
+.main-hedding::after {
+    background: black;
+    width: 40px;
+}

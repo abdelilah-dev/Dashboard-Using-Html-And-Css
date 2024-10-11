@@ -1,0 +1,171 @@
+:root {
+    --blue-color: #0075ff;
+    --blue-alt-color: #0d69d5;
+    --orange-color: #f69e0b;
+    --green-color: #22c55e;
+    --red-color: #f44336;
+    --gray-color: #888;
+
+    --main-transition-duration: 0.3s;
+}
+
+/* Start overview section */
+@media (max-width: 767px) {
+    .overview {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .overview .info-box .box>div>label {
+        margin: auto;
+    }
+}
+
+.overview .avatar-box {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.overview .avatar-box img {
+    width: 120px;
+    height: 120px;
+}
+
+.overview .avatar-box .level {
+    height: 6px;
+    width: 70%;
+    position: relative;
+}
+
+.overview .avatar-box .level span {
+    height: 6px;
+    background-color: var(--blue-color);
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 6px 0 0 6px;
+}
+
+.overview .info-box .box {
+    flex-wrap: wrap;
+    border-bottom: 1px solid #eee;
+    transition: var(--main-transition-duration);
+}
+
+.overview .info-box .box:hover {
+    background-color: #f9f9f9;
+}
+
+.overview .info-box .box h4 {
+    font-weight: normal;
+}
+
+.overview .info-box .box>div {
+    min-width: 250px;
+    padding: 10px 0 0;
+}
+
+.overview .info-box .box>div>label {
+    width: fit-content;
+    display: block;
+}
+
+.toggle-checkbox {
+    appearance: none;
+    display: block;
+}
+
+.toggle-switch {
+    background-color: #ccc;
+    width: 78px;
+    height: 20px;
+    border-radius: 16px;
+    position: relative;
+    cursor: pointer;
+    transition: var(--main-transition-duration);
+}
+
+.toggle-switch::before {
+    font-family: var(--fa-style-family-classic);
+    content: "\f00d";
+    font-weight: 900;
+    background: white;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ccc;
+    border-radius: 50%;
+    font-size: 8px;
+    transition: var(--main-transition-duration);
+}
+
+.toggle-checkbox:checked+.toggle-switch {
+    background-color: var(--blue-color);
+}
+
+.toggle-checkbox:checked+.toggle-switch::before {
+    content: "\f00c";
+    left: 62px;
+}
+
+/* End overview section */
+/* Start Other Data */
+@media (max-width: 767px) {
+    .other-data {
+        flex-direction: column;
+    }
+}
+.other-data .skills-card {
+    flex-grow: 1;
+}
+
+.other-data .skills-card ul li {
+    padding: 15px 0;
+}
+
+.other-data .skills-card ul li:not(:last-child) {
+    border-bottom: 1px solid #eee;
+}
+
+.other-data .skills-card ul li span {
+    display: inline-flex;
+    padding: 4px 10px;
+    background-color: #eee;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.other-data .skills-card ul li span:not(:last-child) {
+    margin-left: 5px;
+}
+
+.other-data .activities {
+    flex-grow: 2;
+}
+
+.other-data .activities .activity:not(:last-child) {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.activities .activity img {
+    width: 64px;
+    height: 64px;
+    margin-right: 10px;
+}
+
+.activities .activity >div:last-child {
+    margin-left: auto;
+    text-align: right;
+}
+
+/* End Other Data */

@@ -1,0 +1,406 @@
+:root {
+    --blue-color: #0075ff;
+    --blue-alt-color: #0d69d5;
+    --orange-color: #f69e0b;
+    --green-color: #22c55e;
+    --red-color: #f44336;
+    --gray-color: #888;
+
+    --main-transition-duration: 0.3s;
+
+}
+
+.wrapper {
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+}
+
+@media (max-width: 767px) {
+    .wrapper {
+        -ms-grid-columns: minmax(200px, 1fr);
+        grid-template-columns: minmax(200px, 1fr);
+    }
+}
+
+/* Start Welcome Section  */
+
+.wrapper .welcome .info img {
+    width: 200px;
+}
+
+.welcome .avatar {
+    width: 65px;
+    height: 65px;
+    margin-left: 20px;
+    border: 2px solid white;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 0 5px #ddd;
+    box-shadow: 0 0 5px #ddd;
+    margin-top: -32px;
+}
+
+.welcome .body {
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.welcome .body>div {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+@media (max-width: 767px) {
+    .welcome .body>div:not(:last-child) {
+        margin-bottom: 20px;
+    }
+}
+
+.welcome .visit {
+    margin: 0 15px 15px auto;
+    -webkit-transition: var(--main-transition-duration);
+    transition: var(--main-transition-duration);
+}
+
+.welcome .visit:hover {
+    background-color: var(--blue-alt-color);
+}
+
+/* End Welcome Section  */
+/* Start Quick Draft Section  */
+.quick-draft form textarea {
+    min-height: 180px;
+    resize: none;
+}
+
+.quick-draft form .save {
+    margin: 0 15px 15px auto;
+}
+
+/* End Quick Draft Section  */
+
+/* Start Yearly Targets section  */
+.targets .targets-row .icon {
+    width: 80px;
+    height: 80px;
+    margin-right: 15px;
+}
+
+.targets .detials {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+.targets .progress {
+    width: 100%;
+    height: 4px;
+}
+
+.targets .blue .icon,
+.targets .blue .progress {
+    background-color: rgb(0 117 255 / 20%);
+}
+
+.targets .orange .icon,
+.targets .orange .progress {
+    background-color: rgb(0 117 255 / 20%);
+}
+
+.targets .blue .icon,
+.targets .blue .progress {
+    background-color: rgb(245 158 11 / 20%);
+}
+
+.targets .green .icon,
+.targets .green .progress {
+    background-color: rgb(34 197 94 / 20%);
+}
+
+
+.targets .progress span span {
+    position: absolute;
+    bottom: 16px;
+    right: -16px;
+    padding: 2px 5px;
+    border-radius: 6px;
+    font-size: 13px;
+    color: white;
+}
+
+.targets .progress span span::after {
+    content: '';
+    position: absolute;
+    border: 5px solid;
+    border-color: transparent;
+    bottom: -9px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.targets>.blue .progress span>span::after {
+    border-top-color: var(--blue-color);
+}
+
+.targets>.orange .progress span>span::after {
+    border-top-color: var(--orange-color);
+}
+
+.targets>.green .progress span>span::after {
+    border-top-color: var(--green-color);
+}
+
+/* End Yearly Targets section  */
+
+/* Start Tickets Statistics  */
+.tickets .box {
+    width: calc(50% - 10px);
+}
+
+/* End Tickets Statistics  */
+
+/* Start Latest News section  */
+.latest-news .news-content .box:not(:last-child) {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.latest-news .news-content .box img {
+    width: 100px;
+    margin: 0 15px 0 0;
+}
+
+.latest-news .news-content .box .info {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+}
+
+@media (max-width:676px) {
+    .latest-news .news-content .box {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        gap: 20px;
+    }
+}
+
+/* End Latest News section  */
+/* Start Latest Tasks  */
+.tasks-section .tasks-content .box:not(:last-child) {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.tasks-section .tasks-content .info {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+}
+
+.tasks-section .tasks-content .done {
+    opacity: 0.3;
+
+}
+
+.tasks-content .done .info h3 {
+    text-decoration: line-through;
+}
+
+.tasks-content .done .info p {
+    text-decoration: line-through;
+}
+
+/* End Latest Tasks  */
+
+/* Start Latest Uploads */
+.uploads-section ul li:not(:last-child) {
+    border-bottom: 1px solid #eee;
+}
+
+.uploads-section ul li img {
+    width: 40px;
+}
+
+/* End Latest Uploads */
+
+/* Start Last Project Progress  */
+.project-progress>ul::before {
+    content: '';
+    width: 2px;
+    height: 100%;
+    background-color: var(--blue-color);
+    position: absolute;
+    top: 0;
+    left: 11px;
+    z-index: 0;
+}
+
+.project-progress>ul li::before {
+    content: '';
+    margin-right: 15px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid white;
+    outline: 2px solid var(--blue-color);
+    display: block;
+    background-color: white;
+    z-index: 1;
+
+}
+
+.project-progress>ul li.done::before {
+    background-color: var(--blue-color);
+}
+
+.project-progress>ul li.current::before {
+    background-color: var(--blue-color);
+    -webkit-animation: current-bg 0.8s infinite alternate;
+    animation: current-bg 0.8s infinite alternate;
+}
+
+@-webkit-keyframes current-bg {
+    to {
+        background-color: white;
+    }
+}
+
+@keyframes current-bg {
+    to {
+        background-color: white;
+    }
+}
+
+.project-progress>img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    opacity: 0.1;
+}
+
+/* End Last Project Progress  */
+
+/* Start Reminders  */
+.reminder-section>ul li>span {
+    width: 15px;
+    height: 15px;
+}
+
+.reminder-section>ul li>div {
+    border-left-width: 2px;
+    border-left-style: solid;
+}
+
+/* End Reminders  */
+/* Start Latest Post */
+.post-section .top img {
+    width: 48px;
+    margin-right: 10px;
+}
+
+.post-section .content {
+    text-transform: capitalize;
+    line-height: 1.8;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    min-height: 140px;
+}
+
+/* End Latest Post */
+/* Start Social Media Stats */
+.social-media .box {
+    padding-left: 70px;
+}
+
+.social-media .box i {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: var(--blue-color);
+    width: 52px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-transition: var(--main-transition-duration);
+    transition: var(--main-transition-duration);
+}
+
+.social-media .box.twitter i {
+    background-color: var(--blue-color);
+}
+
+.social-media .box.facebook i {
+    background-color: var(--blue-alt-color);
+}
+
+.social-media .box.youtube i {
+    background-color: red;
+}
+
+.social-media .box.linkedin i {
+    background-color: var(--blue-alt-color);
+}
+
+.social-media .box.twitter,
+.social-media .box.facebook,
+.social-media .box.linkedin {
+    background-color: rgb(29 161 242 / 20%);
+    ;
+    color: var(--blue-color);
+}
+
+.social-media .box.youtube {
+    background-color: rgb(255 0 0 / 20%);
+    color: #ff0000;
+}
+
+/* End Social Media Stats */
+
+/* Start Projects Section  */
+.projects-section .responsive-table {
+    overflow: auto;
+}
+
+.projects-section table {
+    min-width: 1000px;
+    border-spacing: 0;
+}
+
+.projects-section table td {
+    padding: 15px;
+}
+
+.projects-section table thead td {
+    background-color: #eee;
+    font-weight: bold;
+}
+
+.projects-section tbody td {
+    border-bottom: 1px solid #eee;
+    border-left: 1px solid #eee;
+    -webkit-transition: var(--main-transition-duration);
+    transition: var(--main-transition-duration);
+}
+
+.projects-section table img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    padding: 2px;
+    background-color: white;
+}
+
+.projects-section table img:not(:first-child) {
+    margin-left: -20px;
+}
+
+/* End Projects Section  */
+/* End content Section */
