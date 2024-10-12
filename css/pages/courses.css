@@ -1,0 +1,47 @@
+:root {
+    --blue-color: #0075ff;
+    --blue-alt-color: #0d69d5;
+    --orange-color: #f69e0b;
+    --green-color: #22c55e;
+    --red-color: #f44336;
+    --gray-color: #888;
+
+    --main-transition-duration: 0.3s;
+}
+
+/* start Courses Page  */
+.courses-section {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.courses-section .course {
+    overflow: hidden;
+}
+
+.courses-section .course .avatar {
+    width: 64px;
+    border-radius: 50%;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    border: 2px solid white;
+}
+
+.courses-section .course .description {
+    line-height: 1.6;
+}
+
+.courses-section .course .info {
+    border-top: 1px solid #eee;
+    font-size: 13px;
+}
+
+.courses-section .course .info>span:first-child {
+    position: absolute;
+    top: -13px;
+    left: 50%;
+    transform: translatex(-50%);
+    cursor: pointer;
+}
+
+/* End Courses Page  */
