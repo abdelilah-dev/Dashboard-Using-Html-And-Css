@@ -40,12 +40,22 @@
     width: 100%;
 }
 
+
+
 .h-full {
     height: 100%;
 }
 
 .w-fit {
     width: fit-content;
+}
+
+.w-100 {
+    width: 100px;
+}
+
+.h-100 {
+    height: 100px;
 }
 
 /* End Box  */
@@ -61,6 +71,10 @@
 
 .p-20 {
     padding: 20px;
+}
+
+.pt-10 {
+    padding-top: 10px;
 }
 
 .pt-15 {
@@ -86,9 +100,11 @@
 .pl-15 {
     padding-left: 15px;
 }
+
 .m-15 {
     margin: 15px;
 }
+
 .m-20 {
     margin: 20px;
 }
@@ -174,9 +190,11 @@
 .bg-green {
     background-color: var(--green-color);
 }
+
 .bg-red {
     background-color: var(--red-color);
 }
+
 .bg-red-alt {
     background-color: red;
 }
@@ -282,6 +300,10 @@
     border-left-color: var(--red-color);
 }
 
+.border-eee {
+    border: 1px solid #eee;
+}
+
 /* End Border  */
 
 /* Start components  */
@@ -327,6 +349,10 @@
     .block-mobile {
         display: block;
 
+    }
+
+    .w-full-mobile {
+        width: 100%;
     }
 }
 

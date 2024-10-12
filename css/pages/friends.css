@@ -1,0 +1,57 @@
+:root {
+    --blue-color: #0075ff;
+    --blue-alt-color: #0d69d5;
+    --orange-color: #f69e0b;
+    --green-color: #22c55e;
+    --red-color: #f44336;
+    --gray-color: #888;
+
+    --main-transition-duration: 0.3s;
+}
+
+/* Start Friends Section  */
+.friends-section {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.friends-section .contact {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.friends-section .contact i {
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 50%;
+    color: #666;
+    font-size: 13px;
+    transition: var(--main-transition-duration);
+}
+
+.friends-section .contact i:hover {
+    background-color: var(--blue-color);
+    color: white;
+}
+
+.friends-section .icons {
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+.friends-section .icons > div i {
+    margin-right: 5px;
+}
+.friends-section .icons .vip {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 40PX;
+    opacity: 0.2;
+}
+
+/* End Friends Section  */

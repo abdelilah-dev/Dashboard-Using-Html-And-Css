@@ -1,0 +1,107 @@
+:root {
+    --blue-color: #0075ff;
+    --blue-alt-color: #0d69d5;
+    --orange-color: #f69e0b;
+    --green-color: #22c55e;
+    --red-color: #f44336;
+    --gray-color: #888;
+
+    --main-transition-duration: 0.3s;
+}
+
+/* start Files Section  */
+.files-section {
+    flex-direction: row-reverse;
+    align-items: flex-start;
+}
+
+@media (max-width: 767px) {
+    .files-section {
+        flex-direction: column;
+    }
+}
+
+/* Start File Stats  */
+.files-stats {
+    min-width: 260px;
+}
+
+.files-stats>div .icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.files-stats .icon.blue {
+    background-color: rgb(0 117 255 / 20%);
+}
+
+.files-stats .icon.green {
+    background-color: rgb(34 197 94 / 20%);
+}
+
+.files-stats .icon.red {
+    background-color: rgb(244 67 54 / 20%);
+}
+
+.files-stats .icon.orange {
+    background-color: rgb(245 158 11 / 20%);
+}
+
+.files-stats>div .size {
+    margin-left: auto;
+}
+
+.files-stats .upload {
+    padding: 10px 15px;
+    margin: 15px auto 0;
+    transition: var(--main-transition-duration);
+}
+
+.files-stats .upload:hover {
+    background-color: var(--blue-alt-color);
+}
+
+.files-stats .upload:hover i {
+    animation: up-down 0.8s infinite;
+}
+
+@keyframes up-down {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* End File Stats  */
+
+/* Start File content  */
+.files-content {
+    flex: 1;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.files-content .file>i {
+    color: #666;
+}
+
+.files-content .file .icon img {
+    width: 64px;
+    height: 64px;
+    transition: var(--main-transition-duration);
+}
+
+.files-content .file .info {
+    border-top: 1px solid #eee;
+}
+
+/* End File content  */
+/* End Files Section  */

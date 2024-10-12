@@ -1,0 +1,90 @@
+:root {
+    --blue-color: #0075ff;
+    --blue-alt-color: #0d69d5;
+    --orange-color: #f69e0b;
+    --green-color: #22c55e;
+    --red-color: #f44336;
+    --gray-color: #888;
+
+    --main-transition-duration: 0.3s;
+}
+
+/* Start Plans-section  */
+.plans-section {
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+}
+
+@media (max-width: 767px) {
+    .plans-section {
+        grid-template-columns: 1fr;
+
+    }
+}
+
+.plans-section .plan .top {
+    border: 3px solid white;
+    outline: 3px solid transparent;
+}
+
+.plans-section .green .top {
+    outline-color: var(--green-color);
+}
+
+.plans-section .blue .top {
+    outline-color: var(--blue-color);
+}
+
+.plans-section .green .top {
+    outline-color: var(--green-color);
+}
+
+.plans-section .orange .top {
+    outline-color: var(--orange-color);
+}
+
+.plans-section .plan .top .price {
+    font-size: 40px;
+    position: relative;
+    width: fit-content;
+    margin: auto;
+}
+
+.plans-section .plan .top .price span {
+    position: absolute;
+    top: 0;
+    left: -20px;
+    font-size: 25px;
+}
+
+.plans-section .plan ul {
+    margin: 15px 0;
+}
+
+.plans-section .plan ul li {
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.plans-section .plan ul li i:first-child {
+    margin-right: 5px;
+    font-size: 18px;
+}
+
+.plans-section .plan ul li .yes {
+    color: var(--green-color);
+}
+
+.plans-section .plan ul li i:last-child {
+    margin-left: auto;
+    color: var(--gray-color);
+    cursor: pointer;
+}
+
+.plans-section .plan ul li i:not(.yes, .help) {
+    color: var(--red-color);
+}
+
+/* End Plans-section  */
